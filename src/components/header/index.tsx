@@ -10,7 +10,9 @@ export default function Header() {
 
   return (
     <header
-      className={`py-4 px-5 flex justify-between items-center shadow-md ${themeContext?.theme}`}
+      className={`py-4 px-5 flex justify-between items-center shadow-md ${
+        isDarkTheme && "dark bg-[#202020]"
+      }`}
     >
       <h1 className="text-2xl font-bold">Welcome!</h1>
       <button
