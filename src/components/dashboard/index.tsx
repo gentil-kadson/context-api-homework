@@ -3,7 +3,6 @@
 import AuthContext from "@/contexts/AuthContext";
 import { useContext } from "react";
 import Button from "../button";
-import { LogOutIcon } from "lucide-react";
 
 export default function Dashboard() {
   const authContext = useContext(AuthContext);
