@@ -1,10 +1,9 @@
-import { ReactNode } from "react";
+import { ButtonHTMLAttributes, ReactNode } from "react";
 import { useContext } from "react";
 import ThemeContext from "@/contexts/ThemeContext";
 
-interface ButtonProps {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
-  [key: string]: any;
 }
 
 export default function Button({ children, ...props }: ButtonProps) {
