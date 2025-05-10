@@ -4,9 +4,10 @@ import ThemeContext from "@/contexts/ThemeContext";
 
 interface ButtonProps {
   children: ReactNode;
+  [key: string]: any;
 }
 
-export default function Button({ children }: ButtonProps) {
+export default function Button({ children, ...props }: ButtonProps) {
   const themeContext = useContext(ThemeContext);
 
   return (
@@ -16,6 +17,7 @@ export default function Button({ children }: ButtonProps) {
           ? "bg-gray-100 text-[#181818]"
           : "bg-[#181818] text-white"
       }  rounded`}
+      {...props}
     >
       {children}
     </button>
